@@ -1,11 +1,13 @@
 const express = require("express");
 const router = express.Router();
+
 const {
   register,
   login,
   googleLogin,
-  getMe,
+  getMe,          // ✅ NOW EXISTS
 } = require("../controllers/authController");
+
 const { protect } = require("../middleware/auth");
 
 router.post("/register", register);
